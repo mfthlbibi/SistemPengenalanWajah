@@ -1,5 +1,8 @@
 # SistemPengenalanWajah
+### kelompok 1. Inormatika 2025D. Universitas Sebelas Maret
 
+
+## Deskripsi singkat
 Repositori ini berisi proyek sistem pengenalan wajah (Face Recognition) yang dibangun menggunakan metode Eigenface. Sistem ini memanfaatkan teknologi biometrik untuk mengidentifikasi wajah seseorang. Proyek ini kami kembangkan untuk memenuhi tugas mata kuliah Aljabar Linear di Program Studi Informatika, Universitas Sebelas Maret (2026).  Secara garis besar, program bekerja dengan cara mengubah kumpulan citra wajah menjadi representasi matriks (dari RGB ke Grayscale) untuk dihitung matriks Eigenface-nya. Algoritma kemudian akan mencari kecocokan wajah melalui perhitungan nilai jarak Euclidean.
 
 
