@@ -1,5 +1,5 @@
 # SistemPengenalanWajah
-### kelompok 1. Inormatika 2025D. Universitas Sebelas Maret
+kelompok 1. Informatika 2025D. Universitas Sebelas Maret
 
 
 ## Deskripsi singkat
