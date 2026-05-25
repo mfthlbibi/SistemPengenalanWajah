@@ -1,25 +1,49 @@
-# SistemPengenalanWajah
-kelompok 1. Informatika 2025D. Universitas Sebelas Maret
+# Sistem Pengenalan Wajah (Face Recognition)
+**Kelompok 1 · Informatika 2025D · Universitas Sebelas Maret (2026)**
 
+---
 
-## Deskripsi singkat
-Repositori ini berisi proyek sistem pengenalan wajah (Face Recognition) yang dibangun menggunakan metode Eigenface. Sistem ini memanfaatkan teknologi biometrik untuk mengidentifikasi wajah seseorang. Proyek ini kami kembangkan untuk memenuhi tugas mata kuliah Aljabar Linear di Program Studi Informatika, Universitas Sebelas Maret (2026).  Secara garis besar, program bekerja dengan cara mengubah kumpulan citra wajah menjadi representasi matriks (dari RGB ke Grayscale) untuk dihitung matriks Eigenface-nya. Algoritma kemudian akan mencari kecocokan wajah melalui perhitungan nilai jarak Euclidean.
+## 📝 Deskripsi Singkat
+Repositori ini berisi proyek **Sistem Pengenalan Wajah** yang dibangun menggunakan metode **Eigenface**. Sistem ini memanfaatkan teknologi biometrik untuk mengidentifikasi wajah seseorang berdasarkan analisis komponen utama dari citra. 
 
+Proyek ini kami kembangkan untuk memenuhi tugas mata kuliah **Aljabar Linear** di Program Studi Informatika, Universitas Sebelas Maret.
 
-## Teknologi yang Digunakan
-Bahasa Pemrograman: Python.  
-Pemrosesan Tensor & Matriks: PyTorch. 
-Program ini mampu mendeteksi dan berjalan menggunakan GPU berbasis CUDA untuk akselerasi perhitungan, atau otomatis berpindah ke CPU jika GPU tidak tersedia.  Antarmuka Grafis (GUI): Tkinter. Kami mendesain GUI sebagai aplikasi desktop native yang ringan dengan gaya card-style bertema gelap (dark mode) agar nyaman di mata.  
-Computer Vision: OpenCV & Haar Cascade Classifier digunakan untuk proses pre-processing, mulai dari deteksi hingga cropping wajah secara otomatis.  
+### ⚙️ Cara Kerja Program
+1. **Pre-processing:** Mengubah kumpulan citra wajah dari format RGB menjadi *Grayscale*.
+2. **Ekstraksi Fitur:** Menghitung nilai eigen, vektor eigen, dan matriks *Eigenface* dari data latihan.
+3. **Pencocokan (Matching):** Mencari kecocokan wajah baru melalui perhitungan nilai **Jarak Euclidean (*Euclidean Distance*)**.
 
-## Cara penggunaan 
-Siapkan Dataset: Siapkan folder yang berisi kumpulan gambar wajah untuk data training. (Sebagai referensi, kami menggunakan dataset PINS Face Recognition yang bisa diunduh dari Kaggle ).  
-Jalankan Aplikasi: Eksekusi program, lalu gunakan tombol di panel kiri GUI untuk memasukkan (insert) folder dataset yang sudah disiapkan.  
-Pilih Gambar Uji: Masukkan file gambar wajah (test image) yang ingin kamu kenali (format gambar bebas).  
-Lihat Hasilnya: Program akan melakukan pencocokan dan menampilkan satu hasil gambar dari dataset yang paling mirip dengan gambar uji beserta nilai jaraknya. Jika nilai jarak Euclidean melebihi ambang batas (threshold), program akan mengembalikan status "Tidak Dikenal" atau memberikan pesan tidak ada hasil yang sesuai. 
+---
 
+## 🛠️ Teknologi yang Digunakan
 
-## Anggota Kelompok
-RASYID YUSUF SUGIYONO (L0125028)   
-GILANG RIDHO WICAKSANA (L0125044)   
-MIFTAHUL HABIBI (L0125084)  
+Sistem ini dibangun dengan mengombinasikan beberapa teknologi dan *library* populer di Python:
+
+| Komponen | Teknologi / Library | Deskripsi Fungsi |
+| :--- | :--- | :--- |
+| **Bahasa Utama** | Python | Bahasa pemrograman dasar sistem. |
+| **Komputasi Matriks** | PyTorch | Pemrosesan tensor & matriks. Mendukung akselerasi **GPU CUDA** untuk komputasi cepat, dan otomatis beralih ke **CPU** jika GPU tidak tersedia. |
+| **Computer Vision** | OpenCV | Pre-processing citra wajah. |
+| **Deteksi Wajah** | Haar Cascade Classifier | Algoritma untuk deteksi posisi wajah dan *cropping* otomatis. |
+| **Antarmuka (GUI)** | Tkinter | Aplikasi desktop *native* yang ringan dengan desain *card-style* bertema gelap (*dark mode*). |
+
+---
+
+## 🚀 Cara Penggunaan
+
+Ikuti langkah-langkah berikut untuk menjalankan dan menguji aplikasi:
+
+1. **Siapkan Dataset** Siapkan folder yang berisi kumpulan gambar wajah untuk data *training*. 
+   > 💡 *Referensi: Kami menggunakan **Dataset PINS Face Recognition** yang dapat diunduh secara gratis di Kaggle.*
+2. **Jalankan Aplikasi** Eksekusi program utama, lalu gunakan tombol di panel kiri GUI untuk memasukkan (*insert*) folder dataset yang sudah Anda siapkan.
+3. **Pilih Gambar Uji** Masukkan file gambar wajah (*test image*) yang ingin Anda kenali (format gambar bebas).
+4. **Lihat Hasilnya** Program akan melakukan pencocokan dan menampilkan satu gambar dari dataset yang paling mirip beserta nilai jaraknya.
+   > ⚠️ *Catatan: Jika nilai jarak Euclidean melebihi ambang batas (threshold), program akan mengembalikan status **"Tidak Dikenal"**.*
+
+---
+
+## 👥 Anggota Kelompok
+
+* **Rasyid Yusuf Sugiyono** — `L0125028`
+* **Gilang Ridho Wicaksana** — `L0125044`
+* **Miftahul Habibi** — `L0125084`
